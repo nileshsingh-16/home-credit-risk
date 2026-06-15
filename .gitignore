@@ -1,0 +1,12 @@
+# Ignore a specific folder at the root
+/data/
+
+# Ignore any folder named "target" anywhere in the project
+
+# Python bytecode cache (compiled files)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
