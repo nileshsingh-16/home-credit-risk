@@ -1,5 +1,3 @@
-%%writefile eda_framework/core/metadata_builder.py
-
 import pandas as pd
 
 class MetadataBuilder:
