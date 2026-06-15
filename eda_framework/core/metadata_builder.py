@@ -1,3 +1,5 @@
+%%writefile eda_framework/core/metadata_builder.py
+
 import pandas as pd
 
 class MetadataBuilder:
@@ -21,6 +23,10 @@ class MetadataBuilder:
             rows.append({
                 "column_name": col,
                 "pandas_dtype": str(s.dtype),
+                "missing_count": s.isna().sum(),
+                "missing_pct": s.isna().mean(),
+                "unique_count": s.nunique(dropna=True),
+                "unique_pct": s.nunique(dropna=True) / len(df),
                 "dominant_pct": dominant_pcy
             })
 
